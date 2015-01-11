@@ -1,4 +1,4 @@
-# Copy text to clipboard from server
+# Copy text to clipboard from remote
 
 ## Environments
 
@@ -8,20 +8,20 @@ I think available also on other Linux Distributions.
 
 ## Prerequisite
 
-* Adding SSH public key on the server (for an authentication without a password)
-* `~/.serverhostname` file on the client
+* Adding SSH public key on the remote (for an authentication without a password)
+* `~/.remotehostname` file on the local
 * xsel `sudo apt-get install xsel`
-* `~/.clipboard` file on the server
+* `~/.clipboard` file on the remote
 
-`.serverhostname` must contain only 1 line. It is used as `ssh _HERE_ ...`.
+`.remotehostname` must contain only 1 line. It is used as `ssh _HERE_ ...`.
 
 ## Installation
 
-Copy `copyfromserver` to a directory in `PATH`.
+Copy `copyfromremote` to a directory in `PATH`.
 
 ## Usage
 
-Create `~/.clipboard` on the server and `~/.serverhostname` on the client. Then run `copyfromserver` on the client. The text in `.clipboard` is sent to the clipboard by xsel.
+Create `~/.clipboard` on the remote and `~/.remotehostname` on the local. Then run `copyfromremote` on the local. The text in `.clipboard` is sent to the clipboard by xsel.
 
 ## License
 

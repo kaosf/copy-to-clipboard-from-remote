@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -f $HOME/.remotehostname ]
+then
+  REMOTEHOSTNAME=`cat $HOME/.remotehostname`
+else
+  REMOTEHOSTNAME=localhost
+fi
+
+CLIPBOARD=$HOME/.clipboardfromremote
+scp $REMOTEHOSTNAME:.clipboard $CLIPBOARD > /dev/null 2>&1
+[ $? -eq 0 ] && xsel -bi < $CLIPBOARD && rm $CLIPBOARD
