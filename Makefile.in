@@ -1,0 +1,13 @@
+PREFIX=
+
+all:
+
+install: all
+	cp copyfromremote $(PREFIX)/bin
+	ln -s $(PREFIX)/bin/copyfromremote $(PREFIX)/bin/cfr
+
+uninstall:
+	rm $(PREFIX)/bin/copyfromremote
+	rm $(PREFIX)/bin/cfr
+
+clean:
