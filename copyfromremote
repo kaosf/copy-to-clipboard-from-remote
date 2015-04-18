@@ -2,7 +2,7 @@
 
 if [ -f $HOME/.remotehostname ]
 then
-  REMOTEHOSTNAME=`cat $HOME/.remotehostname`
+  REMOTEHOSTNAME=`cat $HOME/.remotehostname | head -1`
 else
   REMOTEHOSTNAME=localhost
 fi
