@@ -17,7 +17,17 @@ I think available also on other Linux Distributions.
 
 ## Installation
 
-Copy `copyfromremote` to a directory in `PATH`.
+```sh
+./configure
+sudo make install
+```
+
+Or
+
+```sh
+./configure --prefix=$HOME/local
+make install
+```
 
 ## Usage
 
