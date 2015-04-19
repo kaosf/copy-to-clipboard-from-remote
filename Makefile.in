@@ -3,6 +3,7 @@ PREFIX=
 all:
 
 install: all
+	mkdir -p $(PREFIX)/bin
 	cp copyfromremote $(PREFIX)/bin
 	ln -s $(PREFIX)/bin/copyfromremote $(PREFIX)/bin/cfr
 
